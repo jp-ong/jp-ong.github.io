@@ -100,14 +100,30 @@
         margin: 0.5em 0;
         transition: 125ms;
       }
+      section#repos li.starred {
+        border: solid 2px #ffa;
+        animation: starring 1s ease-in-out infinite;
+      }
       section#repos li:hover {
-        border: solid 1px white;
+        border-color: white;
+        border-style: solid;
+        animation: none;
       }
       ul#contacts {
         background-color: #031113;
         padding: 1.75em 2em 1em;
         border-radius: 1em 0 1em 0;
         list-style: initial;
+      }
+      @keyframes starring {
+        0%,
+        100% {
+          border-color: #fff;
+        }
+        25%,
+        75% {
+          border-color: #ffa;
+        }
       }
     </style>
   </head>
@@ -139,24 +155,7 @@
         <section id="repos">
           <h3>My Repositories</h3>
           <ul>
-            <li>
-              <h4>My Online Portfolio Website</h4>
-              <small>Repository:</small>
-              <a
-                href="https://github.com/jp-ong/portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-                >jp-ong/portfolio</a
-              >
-              <small> Live at:</small>
-              <a
-                href="https://ong.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >ong.vercel.app/</a
-              >
-            </li>
-            <li>
+            <li class="starred">
               <h4>
                 COVID-19 Statistics App w/ Next for Static Site Generation
               </h4>
@@ -175,7 +174,21 @@
                 >c19statistics.vercel.app/</a
               >
             </li>
-            <li>
+            <li class="starred">
+              <h4>Override Syntax - A store front for an e-Commerce system</h4>
+              <small>Repository:</small>
+              <a href="https://github.com/jp-ong/override-syntax"
+                >jp-ong/override-syntax</a
+              >
+              <small> Live at:</small>
+              <a
+                href="https://override-syntax.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >override-syntax.herokuapp.com/</a
+              >
+            </li>
+            <li class="starred">
               <h4>COVID-19 Statistics App w/ React</h4>
               <small>Repository:</small>
               <a
@@ -193,17 +206,20 @@
               >
             </li>
             <li>
-              <h4>Override Syntax - A store front for an e-Commerce system</h4>
+              <h4>My Online Portfolio Website</h4>
               <small>Repository:</small>
-              <a href="https://github.com/jp-ong/override-syntax"
-                >jp-ong/override-syntax</a
+              <a
+                href="https://github.com/jp-ong/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >jp-ong/portfolio</a
               >
               <small> Live at:</small>
               <a
-                href="https://override-syntax.herokuapp.com/"
+                href="https://ong.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >override-syntax.herokuapp.com/</a
+                >ong.vercel.app/</a
               >
             </li>
             <li>
